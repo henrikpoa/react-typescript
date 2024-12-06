@@ -23,7 +23,7 @@ function App() {
         </div>
         <div>
           <h2>Suas tarefas:</h2>
-          <Tasklist />
+          <Tasklist taskList={taskList} />
           
         </div>        
       </main>

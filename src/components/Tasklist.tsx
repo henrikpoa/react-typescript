@@ -1,10 +1,17 @@
 import React from 'react'
+import { ITask } from '../interfaces/Task'
+import styles from './Tasklist.module.css'
+import { notEqual } from 'assert'
 
-type Props = {}
+type Props = {
+    taskList: ITask[]
+}
 
-const Tasklist = (props: Props) => {
+const Tasklist = ({taskList}: Props) => {
   return (
-    <p>Lista de tarefas</p>
+    <>
+        {taskList.length>0 ? <p>Tem tarefas cadastradas</p> : <p>Não há tarefas cadastradas</p> }
+    </>
   )
 }
 
