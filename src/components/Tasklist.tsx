@@ -10,7 +10,12 @@ type Props = {
 const Tasklist = ({taskList}: Props) => {
   return (
     <>
-        {taskList.length>0 ? <p>Tem tarefas cadastradas</p> : <p>Não há tarefas cadastradas</p> }
+        {taskList.length>0 ? 
+            taskList.map((task) =>
+            <div key={task.id}>
+                <p>{task.title}</p>
+            </div>
+        ) : <p>Não há tarefas cadastradas</p> }
     </>
   )
 }
